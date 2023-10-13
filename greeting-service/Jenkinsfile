@@ -6,7 +6,8 @@ pipeline{
         stage('Deploy') {
             steps {
                 sh '''
-                    oc project lsm-deploy-strategies oc start-build greeting-service --follow --wait
+                    oc project lsm-deploy-strategies 
+                    oc start-build greeting-service --follow --wait
                 ''' }
                 }
     }
